@@ -1,8 +1,18 @@
 <html>
     <head>
-        <title>Login Page</title>
+        <title>Login Page</title>       
     </head>
     <link rel="stylesheet" type="text/css" href="style1.css">
+    <script type="text/javascript">
+        function verifynull(){
+            if(!document.getElementById('Username' && 'Password').value.trim().length){
+                alert('Enter the Details')
+            }
+            else{
+                window.location.href='successful.html'
+            }
+        }
+    </script>
     <body>
         <div class="login">
             <img src="2.jpg" class="logo">
@@ -11,12 +21,13 @@
             </h1>
             <br>
             <br>
-            <form>
+            <form name="log" methode="GET" onsubmit="return checkEmail(this);">
                 <p>Username</p>
-                <input type="text" name="Username" id="Username" placeholder="Enter the Email" required>
+                <input type="text" name="Username" id="Username" placeholder="Enter the Email" required>  
                 <p>Password</p>
-                <input type="password" name="password" id="password" placeholder="Enter Password" required>
-                <input type="button" onclick="window.location.href ='successful.html';" value="Login"/>
+                <input type="password" name="pass" id="Password" placeholder="Enter Password" required>
+                <input type="button" onclick="verifynull()" value="Login"/>
+                
                 
 
                 <a href="#">Forgot Password?</a><br><br>
