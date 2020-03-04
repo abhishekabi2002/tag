@@ -1,0 +1,41 @@
+title: Abhishek.S
+description: 'CS-STAR Member'
+url: 'https://abhishekabi2002.github.io/'
+baseurl: /
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'S.Abhishek'
+  email: abhishekabi2002@gmail.com
+  twitter_username: a_b_h_i_a_b_h_i
+  github_username:  abhishekabi2002
+  linkedin_username: abhishek-s-52299a181
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
